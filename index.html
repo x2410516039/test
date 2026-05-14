@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Branch Todo Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="app-title">
+        <p class="eyebrow">Git Branch Lab</p>
+        <h1 id="app-title">分支练习 Todo</h1>
+        <p class="summary">
+          这个小项目足够简单，适合用来反复练习创建分支、提交代码和合并修改。
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Todo 工作区">
+        <form class="task-form" id="task-form">
+          <label for="task-input">新任务</label>
+          <div class="form-row">
+            <input
+              id="task-input"
+              name="task"
+              type="text"
+              maxlength="60"
+              placeholder="例如：创建 feature/dark-theme 分支"
+              autocomplete="off"
+              required
+            />
+            <button type="submit">添加</button>
+          </div>
+        </form>
+
+        <div class="stats" aria-live="polite">
+          <span><strong id="total-count">0</strong> 个任务</span>
+          <span><strong id="done-count">0</strong> 个完成</span>
+          <span><strong id="open-count">0</strong> 个待办</span>
+        </div>
+
+        <ul class="task-list" id="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
